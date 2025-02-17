@@ -8,7 +8,6 @@ st.set_page_config(page_title="SolarAI", page_icon="⚡")
 # Display title with icon
 st.markdown("""
     <h1 style="display: flex; align-items: center; color: black;">
-        <img src="https://cdn-icons-png.flaticon.com/512/2906/2906276.png" width="40" style="margin-right: 10px;">
         SolarAI
     </h1>
     <p style="color: black; font-size: 16px;">
