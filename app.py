@@ -16,7 +16,6 @@ st.markdown("""
     </p>
 """, unsafe_allow_html=True)
 
-st.write("Ask me anything about solar energy, installation, or market trends!")
 st.divider()
 
 if "conversation_history" not in st.session_state:
