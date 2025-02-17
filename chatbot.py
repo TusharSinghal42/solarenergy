@@ -47,7 +47,7 @@ def generate_response(user_input):
         response_data = response.json()
         
         if 'candidates' in response_data and len(response_data['candidates']) > 0:
-            ai_response = response_data['candidates'][0]['content']['parts'][0]['text'].replace("\n", " ").replace("**", "<b>").replace("**", "</b>")
+            ai_response = response_data['candidates'][0]['content']['parts'][0]['text'].replace("**", "<b>").replace("**", "</b>")
             return ai_response
         else:
             logging.error(f"Unexpected API response format: {response_data}")
