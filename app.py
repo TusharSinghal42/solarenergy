@@ -4,14 +4,16 @@ from chatbot import generate_response
 # Set page configuration with an icon
 st.set_page_config(page_title="SolarAI", page_icon="⚡")
 
+
 # Display title with icon
 st.markdown("""
-    <h1 style="display: flex; align-items: center; color: white;">
+    <h1 style="display: flex; align-items: center; color: black;">
         <img src="https://cdn-icons-png.flaticon.com/512/2906/2906276.png" width="40" style="margin-right: 10px;">
         SolarAI
     </h1>
 """, unsafe_allow_html=True)
 
+st.write("Ask me anything about solar energy, installation, or market trends!")
 st.divider()
 
 if "conversation_history" not in st.session_state:
@@ -20,6 +22,9 @@ if "conversation_history" not in st.session_state:
 # Custom CSS for dark mode, aligned messages, and avatars
 st.markdown("""
     <style>
+        body, .stApp {
+            background-color: white !important;
+        }
         .chat-container {
             display: flex;
             align-items: center;
