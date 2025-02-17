@@ -11,6 +11,9 @@ st.markdown("""
         <img src="https://cdn-icons-png.flaticon.com/512/2906/2906276.png" width="40" style="margin-right: 10px;">
         SolarAI
     </h1>
+    <p style="color: black; font-size: 16px;">
+    Ask me anything about solar energy, installation, or market trends!
+    </p>
 """, unsafe_allow_html=True)
 
 st.write("Ask me anything about solar energy, installation, or market trends!")
