@@ -1,4 +1,3 @@
-import streamlit as st
 import requests
 import re
 import logging
@@ -7,14 +6,6 @@ import logging
 GEMINI_API_KEY = "AIzaSyBgd0du22e7dTxASubfqUxJLmKBHiyQTGU"
 API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
 
-# Streamlit UI
-'''st.title("Solar Energy Chatbot")
-st.write("Ask me anything about solar energy, installation, or market trends!")
-
-# Context Management
-if "conversation_history" not in st.session_state:
-    st.session_state.conversation_history = []
-'''
 def is_solar_related(query):
     """Determines if a query is related to the solar industry."""
     solar_keywords = ["solar", "photovoltaic", "PV", "sunlight", "solar panel", "renewable energy", "inverter", "battery storage", "LCOE", "grid-tied", "off-grid", "solar efficiency", "net metering", "solar installation","solar energy", "solar power", "photovoltaics", "solar panels", "solar cells",
@@ -64,15 +55,3 @@ def generate_response(user_input):
     except Exception as e:
         logging.error(f"Error in LLM response: {str(e)}")
         return "I'm having trouble processing your request. Please try again."
-
-# User Input
-'''user_input = st.chat_input("Enter your question:")
-if user_input:
-    response = generate_response(user_input)
-    st.text_area("Chatbot Response:", response, height=100)
-
-# Display conversation history
-st.subheader("Conversation History")
-for chat in st.session_state.conversation_history:
-    role = "*User:" if chat["role"] == "user" else "Chatbot:*"
-    st.markdown(f"{role} {chat['content']}")'''
